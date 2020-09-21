@@ -1,13 +1,17 @@
-import Rules from setup.py
+from setup import setRules
 
-class Game():
+@setRules.register
+class Game(setRules):
 
-    def getName()-> str:
+    def getName():
         return "Conways Game of Life"
 
-    def rulesApplied(bool isAlive, int neighbourCount) -> int:
+    def rulesApplied(isAlive, neighbourCount):
         if(isAlive):
-            return (neighbourCount==2||neighbourCount==3)
+            return (neighbourCount==2 | neighbourCount==3)
         else:
             return (neighbourCount==3)
         return isAlive
+
+#print(issubclass(Game,setRules))
+#s print(Game.__mro__)

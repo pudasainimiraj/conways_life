@@ -12,5 +12,5 @@ class Conway(tk.Frame):
         print(game().getName)
 
 root=tk.Tk()
-app=Application(master=root)
+app=Conway(master=root)
 app.mainloop()

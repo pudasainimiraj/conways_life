@@ -6,7 +6,7 @@ class Conway(tk.Frame):
         super().__init__(master)
         self.master=master
         self.pack()
-        self.create_widgets()
+
 
     def write(self):
         print(game().getName)
